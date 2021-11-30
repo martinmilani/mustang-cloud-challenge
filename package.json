@@ -12,6 +12,7 @@
   "author": "martinmilani",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.16.3",
     "cheerio": "^1.0.0-rc.10",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
