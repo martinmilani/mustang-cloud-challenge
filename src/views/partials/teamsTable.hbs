@@ -1,0 +1,44 @@
+<table>
+  <thead>
+    <tr>
+      <th>POS</th>
+      <th class="equipo">
+        <div class="image-container"></div>
+        <div class="name-container">EQUIPO</div>
+      </th>
+      <th>PJ</th>
+      <th>G</th>
+      <th>E</th>
+      <th>P</th>
+      <th class="hide">GF</th>
+      <th class="hide">GC</th>
+      <th class="hide">DG</th>
+      <th>Pts.</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each teams}}
+      <tr class={{isPromoOrDesc @index}}>
+        <td class="pos">{{inc @index}}</td>
+        <td>
+          <div class="equipo">
+            <div class="image-container">
+              <img src="{{imagen}}" alt="" />
+            </div>
+            <div class="name-container">
+              {{equipo}}
+            </div>
+          </div>
+        </td>
+        <td>{{pj}}</td>
+        <td>{{g}}</td>
+        <td>{{e}}</td>
+        <td>{{p}}</td>
+        <td class="hide">{{gf}}</td>
+        <td class="hide">{{gc}}</td>
+        <td class="hide">{{dg}}</td>
+        <td>{{pts}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

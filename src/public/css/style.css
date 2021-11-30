@@ -1,0 +1,113 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: whitesmoke;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 1.25em;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 0.5em;
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
+
+th {
+  padding: 0.25em;
+  text-align: center;
+}
+
+th.image-container {
+  width: 50px;
+}
+
+td {
+  text-align: center;
+  padding: 0.5em 0.1em;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+}
+
+.subtitle {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.hide {
+  display: none;
+}
+
+.promo {
+  background-color: mediumseagreen;
+  color: white;
+}
+
+.descenso {
+  background-color: indianred;
+  color: white;
+}
+
+.pos {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.equipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  margin-left: 0.25em;
+}
+
+.image-container {
+  width: 25%;
+}
+
+.name-container {
+  width: 100%;
+  margin-left: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .hide {
+    display: table-cell;
+  }
+
+  table {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .equipo {
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 50%;
+  }
+
+  .name-container {
+    width: 50%;
+    margin-left: 1em;
+    text-align: left;
+  }
+}
