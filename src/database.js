@@ -14,10 +14,7 @@ import { INTERVAL_TIME, MONGODB_URI } from "./config";
 
     async function intervalFunc() {
       //clean DB
-      await Team.deleteMany({});
-      console.log("DB Deleted!");
       scrapper();
-      console.log("Re-Scrrapped!");
     }
 
     setInterval(intervalFunc, INTERVAL_TIME);

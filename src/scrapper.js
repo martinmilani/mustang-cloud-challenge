@@ -5,6 +5,7 @@ const request = require("request-promise");
 const cheerio = require("cheerio");
 
 async function scraper() {
+  await Team.deleteMany({});
   const $ = await request({
     uri: "https://www.futbolargentino.com/primera-division/tabla-de-posiciones",
     transform: (body) => cheerio.load(body),
