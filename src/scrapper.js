@@ -11,7 +11,7 @@ async function scraper() {
     transform: (body) => cheerio.load(body),
   });
 
-  $("tbody")
+  await $("tbody")
     .find("tr")
     .each((i, el) => {
       const pos = $(el).find("td:nth-child(1)").text();
@@ -90,7 +90,6 @@ async function scraper() {
         dg: dg,
         pts: pts,
       });
-
       team.save(function (error) {
         if (error) {
           console.log(error);
@@ -98,7 +97,7 @@ async function scraper() {
       });
     });
 
-  console.log("Fin.");
+  console.log("Data scrapped");
 }
 
 export default scraper;

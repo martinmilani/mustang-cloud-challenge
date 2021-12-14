@@ -1,4 +1,5 @@
 import Team from "../models/Team";
+import scrapper from "../scrapper";
 
 export const renderTeams = async (req, res) => {
   const teams = await Team.find().lean();
